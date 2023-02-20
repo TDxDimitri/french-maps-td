@@ -12,6 +12,9 @@ body {
     width: 100%;
     max-width: 1440px;
 }
+.green {
+    color: #095b2f;
+}
 /* container du titre */
 .titre {
     display: flex;
@@ -29,7 +32,9 @@ body {
 }
 /* container de la carte */
 .map{
-    width: 100%;
+    width: 50%;
+    max-width: 50%;
+
 }
 .land {
 
@@ -54,8 +59,21 @@ transform-origin: center;
 
 .info{
     display: flex;
-    justify-content: center;
-    background-color: aqua;
-    width: 100%;
+    align-items: center;
+    justify-content: left;
+    justify-content: space-around;
+    background-color: #8d99ae;
+    box-shadow: #e63946 10px 10px;
+    width: 30%;
+    height:6%;
     
+}
+
+h1 {
+    margin: 0;
+    font-style: italic;
+}
+
+p {
+    font-size: 24px;
 }
