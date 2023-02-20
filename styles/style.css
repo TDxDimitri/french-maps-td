@@ -1,0 +1,61 @@
+body {
+   background-color: #1d3557;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   margin: 0;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 1440px;
+}
+/* container du titre */
+.titre {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.titre img {
+    padding-top: 50px;
+    padding-bottom: 150px;
+}
+/* container qui englobe la carte et les infos textuels */
+.smallcontainer {
+    display: flex;
+    width: 100%;
+}
+/* container de la carte */
+.map{
+    width: 100%;
+}
+.land {
+
+    fill: #f1faee;
+    fill-opacity: 1 ;
+    stroke:rgb(24, 23, 23);
+    stroke-opacity: 1;
+    stroke-width: 1;
+
+}
+.map path {
+transform-origin: center;
+}
+
+.map path:hover{
+    fill: #e63946;
+    transform: scale(1.02);  
+    stroke-width: 2px;
+}
+
+/* container des infos textuels */
+
+.info{
+    display: flex;
+    justify-content: center;
+    background-color: aqua;
+    width: 100%;
+    
+}
