@@ -12,8 +12,15 @@ body {
     width: 100%;
     max-width: 1440px;
 }
-.green {
-    color: #095b2f;
+.win {
+     
+    fill: #095b2f;
+    fill-opacity: 1;
+    transform:scale(1.03);
+    stroke:rgb(24, 23, 23);
+    stroke-opacity: 1;
+    stroke-width: 3;
+    transform-origin: center;
 }
 /* container du titre */
 .titre {
@@ -43,13 +50,10 @@ body {
     stroke:rgb(24, 23, 23);
     stroke-opacity: 1;
     stroke-width: 1;
-
-}
-.map path {
-transform-origin: center;
+    transform-origin: center;
 }
 
-.map path:hover{
+.land:hover{
     fill: #e63946;
     transform: scale(1.02);  
     stroke-width: 2px;
