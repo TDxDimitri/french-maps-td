@@ -27,8 +27,8 @@ console.log (random)
 
 // compteur de click
 var click = 0;
-
 var Carte = document.querySelector('.map');
+
 Carte.addEventListener('click', function() {
     click = click + 1;
     if (click == 5) {
