@@ -13,10 +13,19 @@ regionsPath.forEach(regionName => {
         document.querySelector('p').innerHTML= title;
         
 
-        if (title === random) {
+        if (title != random) {
             event.target.classList.remove('land')
             event.target.classList.remove('hover')
-            event.target.classList.add('win')         
+            event.target.classList.add('nop')
+        }
+        else{
+            event.target.classList.remove('land')
+            event.target.classList.remove('hover')
+            event.target.classList.add('win')
+            document.querySelector('h3').innerHTML= 'Bravo ! Vous avez trouvez la région mystère en '+click+' coups';
+            document.querySelector('h1').classList.add('d-none');            
+            document.querySelector('.res').classList.add('d-none');            
+            
         }
     });
 });
@@ -32,7 +41,7 @@ var Carte = document.querySelector('.map');
 Carte.addEventListener('click', function() {
     click = click + 1;
     if (click == 5) {
-        alert ('vous avez cliquez '+click+' fois');
+        alert ('vous avez cliquez '+click+' fois');     
     }
 });
 

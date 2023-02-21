@@ -1,20 +1,104 @@
 body {
-   background-color: #1d3557;
-   width: 100%;
-   display: flex;
-   justify-content: center;
-   margin: 0;
+    background-color: #1d3557;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0;
 }
+/* utilitaires */
+.d-none {
+    display: none;
+}
+/* style textes  */
+h1 {
+  color: #f1faee;
+  font-size: 2em;
+  text-align: center;
+}
+h2 {
+    margin: 0;
+    font-style: italic;
+    font-size: 1.3em;
+    text-decoration: underline;
+}
+h3{
+    color: #f1faee;
+    font-size: 3em;
+}
+.rules p {
+    color: #f1faee;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+p {
+    font-size: 1em;
+}
+/* container qui englobe tout les elements */
 .container {
+    padding-left: 10%;
+    padding-right: 10%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100%;
     max-width: 1440px;
 }
-.win {
-     
-    fill: #095b2f;
+
+/* titre*/
+.titre {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.titre img {
+    padding-top: 2%;
+    padding-bottom: 3%;
+}
+/* coontainer qui englobe le xtrasmallcontainer et la div "rules" */
+.smallcontainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+} 
+
+/* container qui englobe la carte et le beandeau région */
+.xtrasmllcontainer {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 60px;
+    width: 100%;
+}
+
+/* container de la carte */
+.map{
+    width: 100%;
+    
+}
+/* container bendeau région */
+.info{
+    padding-left: 10% ;
+    gap: 10%;
+    display: flex;
+    justify-content: flex-start;
+    align-self: center;
+    align-items: center;
+    background-color: #8d99ae;
+    box-shadow: #e63946 10px 10px 0px 0px;
+    width: 80%;
+    max-height: 40px;
+    
+}
+
+.rules {
+
+    width: 100%;
+    display: flex; 
+    flex-direction: column;
+}
+
+.nop {
+    fill: #e9c46a;
     fill-opacity: 1;
     transform:scale(1.03);
     stroke:rgb(24, 23, 23);
@@ -22,26 +106,15 @@ body {
     stroke-width: 3;
     transform-origin: center;
 }
-/* container du titre */
-.titre {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-.titre img {
-    padding-top: 50px;
-    padding-bottom: 150px;
-}
-/* container qui englobe la carte et les infos textuels */
-.smallcontainer {
-    display: flex;
-    width: 100%;
-}
-/* container de la carte */
-.map{
-    width: 50%;
-    max-width: 50%;
-
+.win {
+    
+    fill: #095b2f;
+    fill-opacity: 1;
+    transform:scale(1.03);
+    stroke:rgb(24, 23, 23);
+    stroke-opacity: 1;
+    stroke-width: 3;
+    transform-origin: center;
 }
 .land {
 
@@ -54,30 +127,37 @@ body {
 }
 
 .land:hover{
-    fill: #e63946;
     transform: scale(1.02);  
     stroke-width: 2px;
 }
 
-/* container des infos textuels */
-
-.info{
+.resultat {
+    width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: left;
-    justify-content: space-around;
-    background-color: #8d99ae;
-    box-shadow: #e63946 10px 10px;
-    width: 30%;
-    height:6%;
+    justify-content: center;
+    flex-direction: column;
+
+}
+@media (max-width:415px) {
     
+    .smallcontainer{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    h1 {
+        font-size: 1.2em;
+    }
+    
+    .xtrasmllcontainer{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .info {
+        width: 70%;
+        padding-left: 5%;
+    }
+    .titre {
+        display: none;
+    }
 }
 
-h1 {
-    margin: 0;
-    font-style: italic;
-}
-
-p {
-    font-size: 24px;
-}
